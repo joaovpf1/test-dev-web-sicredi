@@ -1,4 +1,4 @@
-import {dragonIcon} from "../../assets/dragon32x32.png";
+import dragonIcon from "../../assets/dragon32x32.png";
 
 export function Header() {
     return (
