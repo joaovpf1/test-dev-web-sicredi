@@ -1,4 +1,5 @@
 # test-dev-web-sicredi
+
 Objetivo
 Criar uma aplicação que contenha​:
 
@@ -17,6 +18,7 @@ Os seguintes dados devem ser apresentados na página:
 Data de criação;
 Nome;
 Tipo.
+
 Uma página para cadastro de dragões:
 
 Regras:
@@ -30,6 +32,8 @@ Organização do código;
 Componentização das páginas;
 Interface organizada e amigável;
 Uso adequado do css/sass/less. NÃO é permitido usar bibliotecas de estilos como: bootstrap, material design, etc.
+OBS: utilizei Tailwind com o intuito de aprender e exercitar a biblioteca, mesmo não sendo o objetivo da empresa, o teste está desativado e estou utilizando o desafio para aprendizado e estudo.
+
 API
 http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon
 
