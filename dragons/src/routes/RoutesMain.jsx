@@ -3,6 +3,7 @@ import { DragonProvider } from '../providers/dragonContext';
 
 import { Home } from '../components/Home';
 import { Login } from '../components/Login';
+import { CreatePage } from '../components/CreatePage';
 
 
 
@@ -13,6 +14,7 @@ export const RoutesMain = () => {
             <Routes>
                 <Route path='/' element={<Login/>} />
                 <Route path='/home' element={<Home/>}/>
+                <Route path='/create' element={<CreatePage/>}/>
             </Routes>
         </DragonProvider>
     )
