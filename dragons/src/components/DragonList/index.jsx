@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { DragonContext } from "../../providers/dragonContext"
 
 export function DragonList() {
-    const {dragonList} = useContext(DragonContext);
+    const {dragonList, deleteDragon} = useContext(DragonContext);
 
     const dragonsListAZ = dragonList.sort((a, b) => {
       const nameA = a.name.toLowerCase();
@@ -23,8 +23,8 @@ export function DragonList() {
                    <p>Creation date:{dragon.createdAt}</p> 
                 </div>
                 <div>
-                    <button onClick={""}> Delete</button>
-                    <button onClick={""}>Edit</button>
+                    <button onClick={"()=> editDragon(dragon)"}>Edit</button>
+                    <button onClick={()=> deleteDragon(dragon.id)}>Delete</button>
                 </div>
             </li>
            ))}

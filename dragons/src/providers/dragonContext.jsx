@@ -22,9 +22,18 @@ export const DragonProvider =({ children })=>{
         getDragons();
     },[])
 
+    const deleteDragon = async (id) =>{
+        try{
+            await hubApi.delete(`/${id}`)
+            const newDragonList = dragonList.filter(dragon => dragon.id !== id);
+            setDragonList(newDragonList)
+        }catch(error){
+            console.log(error)
+        }
+    }
     
     return(
-        <DragonContext.Provider value={{dragonList, setDragonList, editingDragon, setEditingDragon, editModalVisible, setEditModalVisible, deleteModalVisible, setDeleteModalVisible}}>
+        <DragonContext.Provider value={{dragonList, setDragonList, editingDragon, setEditingDragon, editModalVisible, setEditModalVisible, deleteModalVisible, setDeleteModalVisible, deleteDragon}}>
             {children}
         </DragonContext.Provider>
     )
