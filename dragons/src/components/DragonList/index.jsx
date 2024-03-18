@@ -4,10 +4,18 @@ import { DragonContext } from "../../providers/dragonContext"
 export function DragonList() {
     const {dragonList} = useContext(DragonContext);
 
+    const dragonsListAZ = dragonList.sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (nameA < nameB) return -1;
+      if (nameA > nameB) return 1;
+      return 0;
+    });
+    
     return (
       <>
         <ul>
-           {dragonList.map(dragon=>(
+           {dragonsListAZ.map(dragon=>(
             <li key={dragon.id}>
                 <div>
                    <h2>Name: {dragon.name}</h2>
