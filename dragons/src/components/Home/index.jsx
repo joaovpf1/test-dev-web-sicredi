@@ -7,6 +7,10 @@ export function Home() {
         <Header/>
 
         <main>
+          <section>
+            <h2>Gostaria de adicionar um novo dragão?</h2>
+            <button>Adicionar</button>
+          </section>
           <DragonList/>
         </main>
       </>
