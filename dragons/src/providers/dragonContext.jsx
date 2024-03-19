@@ -31,9 +31,18 @@ export const DragonProvider =({ children })=>{
             console.log(error)
         }
     }
+
+    const createDragon = async (formData) =>{
+        try{
+            const {data} = await hubApi.post('/', formData)
+            setDragonList([...dragonList, data])
+        }catch(error){
+            console.log(error)
+        } 
+    }
     
     return(
-        <DragonContext.Provider value={{dragonList, setDragonList, editingDragon, setEditingDragon, editModalVisible, setEditModalVisible, deleteModalVisible, setDeleteModalVisible, deleteDragon}}>
+        <DragonContext.Provider value={{dragonList, setDragonList, editingDragon, setEditingDragon, editModalVisible, setEditModalVisible, deleteModalVisible, setDeleteModalVisible, deleteDragon, createDragon}}>
             {children}
         </DragonContext.Provider>
     )
