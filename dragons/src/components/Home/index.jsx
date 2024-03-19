@@ -9,9 +9,9 @@ export function Home() {
 
         <main>
           <section>
-            <h2>Gostaria de adicionar um novo dragão?</h2>
+            <h2>Wnat to create a new <b>dragon</b>?</h2>
             <Link to='/create'>
-            <button>Adicionar</button>
+            <button>Create</button>
             </Link>
           </section>
           <DragonList/>
