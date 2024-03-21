@@ -23,29 +23,31 @@ export function CreatePage() {
     return (
       <>
         <Header/>
-        <main>
-            <div>
-                <h1>Criate the dragon:</h1>
-                <Link to='/home'>Back</Link>
-            </div>
-            <form onSubmit={handleSubmit(submit)}>
-                    <div>
-                        <label>Name</label>
-                        <input name='name' placeholder='Type name here...' type='text' {...register('name')}/>
-                    </div>
+        <main className="min-h-screen flex items-center justify-center pb-24">
+            <section className="w-64 h-72 bg-zinc-900 flex flex-col items-center justify-center rounded">
+                <div className="w-full flex items-center justify-around pb-2.5 ">
+                    <h1 className="text-red-500 font-semibold">Create a dragon:</h1>
+                    <Link className="text-center font-semibold" to='/home'>X</Link>
+                </div>
+                <form className="flex flex-col items-center" onSubmit={handleSubmit(submit)}>
+                        <div className="flex flex-col items-center pb-2.5">
+                            <label>Name</label>
+                            <input className="bg-zinc-800 rounded pl-1 pt-0.5" name='name' placeholder='Type name here...' type='text' {...register('name')}/>
+                        </div>
 
-                    <div>
-                        <label>Type</label>
-                        <input name='type' placeholder='Type the type here...' type='text' {...register('type')}/>
-                    </div>
+                        <div className="flex flex-col items-center pb-2.5">
+                            <label>Type</label>
+                            <input className="bg-zinc-800 rounded pl-1 pt-0.5" name='type' placeholder='Type the type here...' type='text' {...register('type')}/>
+                        </div>
 
-                    <div>
-                        <label>History</label>
-                        <input name='history' placeholder='Type the history here...' type='text' {...register('history')}/>
-                    </div>
+                        <div className="flex flex-col items-center pb-2.5">
+                            <label>History</label>
+                            <input className="bg-zinc-800 rounded pl-1 pt-0.5" name='history' placeholder='Type the history here...' type='text' {...register('history')}/>
+                        </div>
 
-                    <button type='submit'>Save</button>
-                </form> 
+                        <button className="mt-2.5 size-12 bg-red-600 hover:bg-red-700 w-14 h-6 rounded font-semibold" type='submit'>Save</button>
+                    </form> 
+            </section>
         </main>
       </>
     )

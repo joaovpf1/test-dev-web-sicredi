@@ -5,7 +5,7 @@ export function Header() {
       <>
         <header className="w-full bg-zinc-900 h-14">
             <div className="flex items-center justify-around pt-2.5">
-                <h1>Dragons</h1>
+                <h1 className="font-semibold ">Dragons</h1>
                 <img src={dragonIcon} alt="Dragon Icon" />
             </div>
         </header>

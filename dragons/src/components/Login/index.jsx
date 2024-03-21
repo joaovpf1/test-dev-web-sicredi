@@ -21,21 +21,21 @@ export function Login() {
   return (
       <>
         <Header/>
-        <main>
-          <div>
-            <h1>
+        <main className="flex items-center justify-center pt-4">
+          <div className="pt-4 flex flex-col items-center gap-2 w-64 h-64 bg-zinc-900 rounded">
+            <h1 className="text-red-500 font-semibold text-2xl" >
               Login
             </h1>
-            <form onSubmit={handleSubmit(submit)}>
-              <div>
+            <form className="flex flex-col items-center" onSubmit={handleSubmit(submit)}>
+              <div className="flex flex-col items-center pb-2.5">
                 <label htmlFor="email">E-mail:</label>
-                <input type="email" name="Email" id="email" {...register("email")}/>
+                <input className="bg-zinc-800 rounded pl-1 pt-0.5" type="email" name="Email" id="email" {...register("email")}/>
               </div>
-              <div>
+              <div className="flex flex-col items-center pb-2.5">
                 <label htmlFor="password">Password:</label>
-                <input type="password" name="Password" id="password" {...register("password")}/>
+                <input className="bg-zinc-800 rounded pl-1 pt-0.5" type="password" name="Password" id="password" {...register("password")}/>
               </div>
-              <button type="submit">Login</button>
+              <button className="mt-2.5 size-12 bg-red-600 hover:bg-red-700 w-14 h-6 rounded font-semibold" type="submit">Login</button>
             </form>
           </div>
         </main>

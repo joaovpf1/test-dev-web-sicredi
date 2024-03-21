@@ -11,11 +11,11 @@ export function Home() {
     return (
       <>
         <Header/>
-        <main>
-          <section>
-            <h2>Wnat to create a new <b>dragon</b>?</h2>
+        <main className="w-full h-screen flex flex-col items-center">
+          <section className="w-full flex items-center justify-around pt-2.5 object-center pb-3">
+            <h2>Create a new <b className="text-red-500">dragon</b>!</h2>
             <Link to='/create'>
-            <button>Create</button>
+            <button className="bg-red-600 hover:bg-red-700 w-14 h-6 rounded font-semibold ">Create</button>
             </Link>
           </section>
           <DragonList/>
