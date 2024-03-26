@@ -21,7 +21,7 @@ export function Login() {
   return (
       <>
         <Header/>
-        <main className="flex items-center justify-center pt-4">
+        <main className="min-h-screen flex items-center justify-center pt-4">
           <div className="pt-4 flex flex-col items-center gap-2 w-64 h-64 bg-zinc-900 rounded">
             <h1 className="text-red-500 font-semibold text-2xl" >
               Login
